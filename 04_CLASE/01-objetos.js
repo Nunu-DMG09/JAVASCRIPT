@@ -50,3 +50,33 @@ console.log(disco3);
 
 let disco4 = new Disco('Bjork', 'volka', 2004);
 console.log(disco4);
+
+
+// UN POCO MAS DE NIVEL CON LOS OBJETOS
+
+const user1 = {
+    nombre: "David",
+    edad: 20,
+}
+
+const {nombre, edad} = user1; // Desestructuración de objetos
+
+console.log(nombre); // David
+console.log(edad); // 20
+
+
+// TENER COPIAS PARA OBJETVOS NUEVOS
+
+const user2 = {...user1}; // Copia superficial del objeto
+
+user2.nombre = "Ana"; // Cambiamos el nombre en la copia
+
+console.log(user2.nombre); // Ana
+
+console.log(user1.nombre); // David (original no cambia)
+
+// TAMBIEN HAY OTRA FORMA DE HACER COPIAS
+
+const user3 = {...user1, edad: 25, nombre: "Matias"}; // Copia con modificación
+
+console.log(user3); // { nombre: 'Matias', edad: 25 }
